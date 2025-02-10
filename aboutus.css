@@ -1,0 +1,74 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4; /* Light background for better readability */
+}
+
+/* Container for main content */
+.container {
+    max-width: 1200px; /* Max width for the main container */
+    margin: 20px auto; /* Centering the container */
+    padding: 20px;
+    background-color: white; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* About section styles */
+.about h2 {
+    color: #146600; /* Header color */
+    margin-bottom: 10px;
+}
+
+.about h3 {
+    color: #009e05; /* Sub-header color */
+    margin-top: 20px;
+}
+
+.about p {
+    margin-bottom: 15px;
+}
+
+/* Contact info section styles */
+.contact-info {
+    margin-top: 30px; /* Space above contact section */
+    border-top: 2px solid #026600; /* Separator line */
+    padding-top: 20px;
+}
+
+.contact-info h4 {
+    color: #00660f; /* Consistent header color */
+    margin-bottom: 5px;
+}
+
+.address, .contact, .hours {
+    margin-bottom: 15px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #00660a; /* Footer color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .about h2 {
+        font-size: 1.5em; /* Responsive header size */
+    }
+
+    .about h3 {
+        font-size: 1.2em; /* Responsive sub-header size */
+    }
+}

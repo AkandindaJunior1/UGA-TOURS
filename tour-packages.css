@@ -1,0 +1,174 @@
+/* Reset default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tour-packages {
+    flex: 2;
+}
+
+.tour-packages h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling tour packages */
+.package {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.package h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.package p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.book-btn {
+    background-color: #2ecc71; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #27ae60; /* Darker green */
+}
+
+/* Aside styles */
+aside {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+}
+
+.park-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.activities h3 {
+    margin: 15px 0;
+}
+.activities a{
+    text-decoration: none;
+    color: #2c3e50;
+
+}
+.activities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.activities li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .package {
+        padding: 10px;
+    }
+
+    .package h3 {
+        font-size: 1.2em;
+    }
+
+    .book-btn {
+        padding: 8px 12px;
+    }
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px; /* Set max width */
+    height: 300px; /* Set fixed height */
+    margin: auto;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%; /* Set fixed width */
+    height: 100%; /* Set fixed height */
+    display: block; /* Ensures that images fill the container */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .carousel-btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
