@@ -10,7 +10,7 @@
 <body>
 <?php
    include_once "nav.php";
-   ?>
+?>
 
     <main class="container">
         <section class="about">
@@ -33,6 +33,17 @@
             </p>
         </section>
 
+        <section class="why-choose-us">
+            <h2>Why Choose UgaTours?</h2>
+            <ul>
+                <li><strong>Expertise:</strong> We have deep knowledge of Uganda’s top destinations and hidden gems.</li>
+                <li><strong>Affordable Packages:</strong> We offer budget-friendly tour options without compromising quality.</li>
+                <li><strong>24/7 Customer Support:</strong> Our dedicated team is always available to assist you.</li>
+                <li><strong>Secure Booking:</strong> We ensure a hassle-free and secure booking process.</li>
+            </ul>
+        </section>
+
+
         <section class="contact-info">
             <div class="address">
                 <h4>Address:</h4>
@@ -47,23 +58,10 @@
                 <p>Monday to Friday: 8:00 AM - 6:00 PM<br> Saturday: 9:00 AM - 4:00 PM<br> Sunday: Closed</p>
             </div>
         </section>
-
-      
     </main>
 
     <footer>
-        <!-- <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="tour-packages.html">Tour Packages</a></li>
-                <li><a href="signup.html">SignUp</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul> -->
-
-            <p>&copy; 2024 UgaTours. All rights reserved.</p>
-
-        <!-- </nav> -->
+        <p>&copy; 2024 UgaTours. All rights reserved.</p>
     </footer>
 </body>
 </html>
