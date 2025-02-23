@@ -1,65 +1,66 @@
-# TCPDF Library
-
-TCPDF is a PHP class for generating PDF documents without requiring external extensions. It is a powerful library that allows you to create complex PDF documents with various features.
-
-## Features
-
-- No external libraries required for basic functions
-- Support for UTF-8 Unicode and Right-To-Left languages
-- Document encryption and digital signature certifications
-- Support for various image formats (JPEG, PNG, SVG)
-- Automatic page header and footer management
-- Support for barcodes and annotations
-- Custom page formats and margins
-
-## Installation
-
-To install the TCPDF library, clone the repository or download the files directly.
-
-
-git clone https://github.com/tecnickcom/tcpdf.git
-## Usage
-
-Include the TCPDF class in your PHP script:
-
-## Configuration
-
-You can configure various settings in the `tcpdf.php` file, such as page format, margins, and more.
-
-## Environment Variables
-
-You can set environment variables in the `.env` file for configuration.
-
-## License
-
-This library is licensed under the GNU Lesser General Public License v3.0. See the [LICENSE](http://www.gnu.org/copyleft/lesser.html) for more details.
 # UgaTours - Tourism Website
 
-Welcome to the UgaTours project! This is a tourism website designed to promote and facilitate domestic and international tourism in Uganda. The platform provides information on tourist sites, curated tour packages, and seamless booking options.
+Welcome to **UgaTours**! This is a website that helps people discover and book amazing tours in Uganda. Whether you're a local or an international visitor, UgaTours makes it easy to explore Uganda's beautiful destinations.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
+## What’s UgaTours About?
 
-## Project Overview
-UgaTours is a comprehensive digital platform that bridges the gap between tourists and service providers. The website offers detailed information on various tourist sites across Uganda, curated tour packages tailored to different interests and budgets, and enables seamless booking and reservation options.
+UgaTours is all about making tourism in Uganda simple and fun. We provide:
+- Information about tourist spots.
+- Curated tour packages for different interests and budgets.
+- Easy booking so you can plan your trip without stress.
 
-### Mission
-Our mission is to encourage Ugandans to discover and appreciate the beauty and diversity of their homeland while making Uganda’s attractions more accessible to international visitors.
+### Our Mission
+We want to help Ugandans explore their own country and make Uganda’s attractions more accessible to everyone.
 
-### Goal
-Our primary goal is to enhance the overall experience of tourists by providing a reliable and user-friendly platform that simplifies the process of discovering, planning, and booking tours in Uganda.
+### Our Goal
+To make your travel experience smooth and enjoyable by giving you a reliable platform to discover, plan, and book tours.
 
-## Features
-- **Home Page**: A comprehensive landing page with an overview of services and featured destinations.
-- **Tour Packages**: Curated tour packages tailored to different interests and budgets.
-- **Booking System**: Seamless booking and reservation options.
-- **Contact Information**: Easy access to contact details and operating hours.
-- **User Authentication**: Signup and login functionality for users.
+## What Can You Do on UgaTours?
 
-## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: PHP
-- **Database**: MySQL (if applicable)
-- **Version Control**: Git
+- Explore Destinations: Check out featured tourist spots on the home page.
+- Book Tours: Choose from curated tour packages and book them easily.
+- Sign Up/Log In: Create an account to manage your bookings.
+- Contact Us: Reach out if you have questions or need help.
+- Learn About Us: Find out more about our mission and goals.
+
+## How We Measure Success
+
+We care about making UgaTours better for you. Here’s how we track our progress:
+
+1. Number of Bookings: We count how many tours are booked to see how popular they are.
+2. Booking Time: We measure how long it takes to book a tour to make the process faster.
+3. User Feedback: After booking, we ask users how satisfied they are to improve our services.
+
+
+## How We Implemented These Metrics
+
+To make UgaTours better, we added some features to track and improve the platform:
+
+1. Tracking Bookings
+- Every time someone books a tour, we count it in the database.
+- This helps us see which tours are popular and which ones need improvement.
+
+2. Measuring Booking Time
+- When someone starts booking a tour, we start a timer.
+- When they finish booking, we stop the timer and save the time it took.
+- This helps us make the booking process faster and smoother.
+
+3. Collecting User Feedback
+- After booking, users can rate their experience on a scale of 1 to 5.
+- We use this feedback to improve our tours and services.
+
+## Generating PDFs with TCPDF
+
+We use the TCPDF library to generate PDFs for booking confirmations. Here’s how it works:
+
+1. After Booking: When a user books a tour, we create a PDF with their booking details (e.g., tour name, price, date).
+2. PDF Features:
+   - Includes tour details like name, description, price, and duration.
+   - Displays a thank-you message and contact information.
+3. User Experience: Users can download or print the PDF for their records.
+
+ Example PDF Content:
+ Tour Name: Queen Elizabeth National Park
+ Price: UGX 150,000
+ Duration: 3 days
+ Date Booked: 2024-05-01
