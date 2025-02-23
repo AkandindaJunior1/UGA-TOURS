@@ -1,77 +1,161 @@
+/* Add Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css');
+
 /* General body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #f4f4f4; /* Light background for better readability */
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-/* Main section styles */
-main {
-    display: flex; /* Use flexbox for layout */
-    max-width: 1200px; /* Max width for the main container */
-    margin: 20px auto; /* Centering the container */
+/* Main section styles - updated to center contents */
+main.container {
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: white; /* White background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Contact section styles */
+/* Contact section styles - updated */
 .contact-section {
-    flex: 2; /* Allow the contact section to take more space */
-    margin-right: 20px; /* Space between contact form and image */
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
 }
 
+/* Update heading color to match aboutus */
 .contact-section h2 {
-    color: #00660a; /* Header color */
+    color: #146600;
 }
 
-.contact-section form {
+.contact-intro {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+/* Contact Info Styles */
+.contact-info {
     display: flex;
-    flex-direction: column; /* Stack form elements vertically */
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.contact-section label {
-    margin-bottom: 5px; /* Space below labels */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.contact-section input,
-.contact-section textarea {
-    padding: 10px; /* Padding for input fields */
-    margin-bottom: 15px; /* Space between fields */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners for inputs */
-    width: 100%; /* Full width for inputs */
-    box-sizing: border-box; /* Include padding and border in total width */
+.info-item i {
+    color: #205103;
+    font-size: 1.2em;
 }
 
-.contact-section button {
-    padding: 10px;
-    background-color: #205103; /* Button color */
+/* Form styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #205103;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(32, 81, 3, 0.1);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #205103;
     color: white;
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners for button */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s; /* Smooth transition */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.contact-section button:hover {
-    background-color: #2a9e00; /* Darker button color on hover */
+.contact-form button:hover {
+    background-color: #2a6a04;
+    transform: translateY(-2px);
 }
 
-/* Image container styles */
-.image_container {
-    flex: 1; /* Allow the image section to take less space */
-    display: flex;
-    align-items: center; /* Center the image vertically */
-    justify-content: center; /* Center the image horizontally */
+/* Contact form centering */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.image_container img {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for image */
+/* Center aside content */
+.contact-aside {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+/* Update image container and image styles */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Fixed height for consistent appearance */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.image-overlay h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 /* Footer styles */
@@ -85,14 +169,46 @@ footer {
     width: 100%;
 }
 
-/* Responsive styles */
+/* Update responsive styles */
 @media (max-width: 768px) {
-    main {
-        flex-direction: column; /* Stack sections vertically on small screens */
+    main.container {
+        padding: 15px;
     }
 
+    .contact-section h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 968px) {
+    main.container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-aside {
+        margin-top: 30px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
     .contact-section {
-        margin-right: 0; /* Remove right margin on small screens */
-        margin-bottom: 20px; /* Space below contact section */
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .image-container {
+        height: 200px;
     }
 }
