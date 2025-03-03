@@ -20,7 +20,7 @@
             <div class="contact-info">
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
-                    <p>+256 123 456 789</p>
+                    <p>+256 771 202 104</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
