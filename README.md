@@ -44,7 +44,91 @@ To make UgaTours better, we added some features to track and improve the platfor
 - When someone starts booking a tour, we start a timer.
 - When they finish booking, we stop the timer and save the time it took.
 - This helps us make the booking process faster and smoother.
+  
+**Implementation of lecture 4 applying Empirical Investigation to MyBookings.php file**
+1. Empirical Investigation
+Goal: Evaluate the performance, usability, and maintainability of the booking.php file.
 
-3. Collecting User Feedback
-- After booking, users can rate their experience on a scale of 1 to 5.
-- We use this feedback to improve our tours and services.
+Techniques:
+
+Formal Experiments: Test specific hypotheses about the code's behavior.
+
+Surveys: Collect user feedback on the booking interface.
+
+2. Hypothesis Testing
+Hypothesis 1: "The booking page loads within 2 seconds for 90% of users."
+
+Experiment: Measure the page load time under different conditions (e.g., with 10, 100, or 1000 bookings).
+
+Metrics: Page load time, server response time, database query execution time.
+
+Action: Optimize the database query and use caching if the hypothesis is not met.
+
+Hypothesis 2: "Users can easily cancel a booking without confusion."
+
+Experiment: Conduct usability testing with real users.
+
+Metrics: Success rate of canceling a booking, user satisfaction score.
+
+Action: Improve the cancel booking button's visibility and confirmation message if users struggle.
+
+Hypothesis 3: "The PDF generation feature is used by at least 50% of users."
+
+Experiment: Track the usage of the "Print PDF" button over a month.
+
+Metrics: Number of PDFs generated, user feedback.
+
+Action: Remove or improve the feature based on usage data.
+
+3. Data Collection
+Performance Metrics:
+
+Page load time.
+
+Database query execution time.
+
+Server response time.
+
+Usability Metrics:
+
+Success rate of canceling a booking.
+
+User satisfaction score (e.g., from surveys).
+
+Maintainability Metrics:
+
+Code readability (e.g., using tools like PHPMD or PHP_CodeSniffer).
+
+4. Control Variables
+Ensure that the following variables are controlled during testing:
+
+Server load (e.g., simulate different numbers of concurrent users).
+
+Database size (e.g., test with 100, 1000, and 10,000 bookings).
+
+User input (e.g., use predefined test cases for booking and cancellation).
+
+5. Improvements
+Performance Optimization:
+
+Optimize the database query to reduce execution time.
+
+Use caching for frequently accessed data.
+
+Usability Improvements:
+
+Make the "Cancel Booking" button more prominent.
+
+Add a confirmation dialog before canceling a booking.
+
+Maintainability Improvements:
+
+Break down the booking.php file into smaller, reusable components.
+
+Add comments and consistent naming conventions for better readability.
+
+6. Metrics Summary
+Metric	Value	Action
+Page Load Time	Target: <2 seconds	Optimize database query and use caching.
+Cancel Booking Success Rate	Target: >90%	Improve button visibility and confirmation dialog.
+Code Readability	Target: High	Add comments and consistent naming conventions.
