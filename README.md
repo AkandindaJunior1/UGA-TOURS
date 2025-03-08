@@ -45,7 +45,7 @@ To make UgaTours better, we added some features to track and improve the platfor
 - When they finish booking, we stop the timer and save the time it took.
 - This helps us make the booking process faster and smoother.
   
-# Implementation of lecture 4 applying Empirical Investigation to MyBookings.php file
+# Implementation of lecture 4 applying Empirical Investigation based on MyBookings.php file
 1. Empirical Investigation
 Goal: Evaluate the performance, usability, and maintainability of the booking.php file.
 
