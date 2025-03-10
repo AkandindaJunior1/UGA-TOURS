@@ -82,7 +82,7 @@ $result = $stmt->get_result();
 </main>
 
 <footer>
-    <p>&copy; 2024 UgaTours. All rights reserved.</p>
+    <p>&copy; 2024 UgaTours Group 11. All rights reserved.</p>
 </footer>
 
 </body>
