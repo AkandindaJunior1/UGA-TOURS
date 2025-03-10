@@ -157,3 +157,38 @@ Survey
 Formal Experiment
 
 Case Study
+
+
+## Software Size Metrics  
+
+To keep track of how our UgaTours project grows, we’re using some basic software size metrics. These help us understand how big our codebase is, how functional our system is, and how much code we’re reusing.  
+
+### **1. Lines of Code (LOC)**  
+LOC simply counts how many lines of code we have across different files.  
+  
+
+### **2. Function Points (FP)**  
+Function Points help measure how much functionality our system provides, not just how many lines of code we write.  
+
+For example, in MyBookings.php, we calculated FP based on what the file does:  
+- Handles booking cancellations  
+- Displays booking details  
+- Fetches a user’s bookings  
+- Stores booking info in the database  
+
+After assigning weights to each function type, we found that MyBookings.php has 20 Function Points. This helps us see how much work the file is doing beyond just counting lines.  
+
+### **3. Reuse Metrics**  
+We also checked how much of our code is reused instead of written from scratch.  
+
+For example,MyBookings.php reuses code from `db_connection.php` and `nav.php`. Out of 200 total lines, about 50 lines were reused. That means this file has a reuse level of 25%.  
+
+The higher the reuse level, the more efficient and maintainable our project becomes!  
+
+### **Tracking Progress**  
+We’ll be tracking these metrics over time:  
+LOC to see how our codebase grows  
+FP to monitor how much functionality we add  
+Reuse Level to make sure we’re writing efficient, reusable code  
+
+By keeping an eye on these numbers, we can make better decisions about improving performance, reducing redundant code, and making UgaTours more scalable. 
