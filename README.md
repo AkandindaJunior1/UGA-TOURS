@@ -132,3 +132,20 @@ Metric	Value	Action
 Page Load Time	Target: <2 seconds	Optimize database query and use caching.
 Cancel Booking Success Rate	Target: >90%	Improve button visibility and confirmation dialog.
 Code Readability	Target: High	Add comments and consistent naming conventions.
+
+# Goal			
+Improve user satisfaction			
+Reduce booking time			
+Increase repeat visitors		
+# Question
+What aspects of the website affect satisfaction?
+What factors contribute to booking time?
+What features encourage users to return?
+# Metric
+User satisfaction score (survey)
+Average time to complete a booking
+Percentage of repeat visitors
+# Investigation Technique
+Survey
+Formal Experiment
+Case Study
