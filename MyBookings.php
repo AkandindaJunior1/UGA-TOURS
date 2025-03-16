@@ -61,9 +61,9 @@ $result = $stmt->get_result();
 
     <!-- Cancel Booking Button -->
     <form action="cancel_booking.php" method="post" onsubmit="return confirm('Are you sure you want to cancel this booking?');">
-        <input type="hidden" name="booking_id" value="<?php echo $row['booking_id']; ?>">
-        <button type="submit" class="cancel-button">Cancel Booking</button>
-    </form>
+    <input type="hidden" name="booking_id" value="<?php echo $row['booking_id']; ?>">
+    <button type="submit" class="cancel-button">Cancel Booking</button>
+</form>
 
     <!-- Print PDF Button -->
     <a href="generate_pdf.php?booking_id=<?php echo $row['booking_id']; ?>" class="print-button" target="_blank">Print PDF</a>
