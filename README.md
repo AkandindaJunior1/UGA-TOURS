@@ -1,226 +1,192 @@
 # UgaTours - Tourism Website
 
-Welcome to **UgaTours**! This is a website that helps people discover and book amazing tours in Uganda. Whether you're a local or an international visitor, UgaTours makes it easy to explore Uganda's beautiful destinations.
+Welcome to **UgaTours**! This platform helps people discover and book amazing tours in Uganda. Whether you're a local or an international visitor, UgaTours makes it easy to explore Uganda's beautiful destinations.
 
-## What’s UgaTours About?
 
-UgaTours is all about making tourism in Uganda simple and fun. We provide:
-- Information about tourist spots.
+## About UgaTours
+UgaTours is designed to simplify and enhance tourism in Uganda. We provide:
+- Information about tourist attractions.
 - Curated tour packages for different interests and budgets.
-- Easy booking so you can plan your trip without stress.
+- A seamless booking process to make trip planning stress-free.
 
-### Our Mission
-We want to help Ugandans explore their own country and make Uganda’s attractions more accessible to everyone.
+### 1. Mission
+Our mission is to help Ugandans explore their country while making Uganda’s attractions more accessible to everyone.
 
-### Our Goal
-To make your travel experience smooth and enjoyable by giving you a reliable platform to discover, plan, and book tours.
+### 2. Goal
+We aim to provide a reliable platform that allows users to discover, plan, and book tours efficiently and enjoyably.
 
-## What Can You Do on UgaTours?
 
-- Explore Destinations: Check out featured tourist spots on the home page.
-- Book Tours: Choose from curated tour packages and book them easily.
-- Sign Up/Log In: Create an account to manage your bookings.
-- Contact Us: Reach out if you have questions or need help.
-- Learn About Us: Find out more about our mission and goals.
+## Features
+1. Explore Destinations: Browse featured tourist spots on the homepage.
+2. Book Tours: Choose from curated tour packages and book them easily.
+3. User Accounts: Sign up/log in to manage bookings.
+4. Contact Support: Get assistance with any questions or issues.
+5. Learn About UgaTours: Understand our mission and how we operate.
+
 
-## How We Measure Success
+## Success Metrics
+To ensure UgaTours remains user-friendly and effective, we track the following:
+
+### 1. Number of Bookings
+- Every booking is recorded in the database.
+- Helps identify popular tours and areas for improvement.
+
+### 2. Booking Time
+- A timer starts when a user begins the booking process and stops when completed.
+- Helps optimize the booking process for efficiency.
 
-We care about making UgaTours better for you. Here’s how we track our progress:
+### 3. User Feedback
+- After booking, users provide feedback.
+- We use this data to enhance our services.
 
-1. Number of Bookings: We count how many tours are booked to see how popular they are.
-2. Booking Time: We measure how long it takes to book a tour to make the process faster.
-3. User Feedback: After booking, we ask users how satisfied they are to improve our services.
 
+## Implementation of Empirical Investigation (MyBookings.php)
+### 1. Empirical Investigation
+**Goal**: Evaluate the performance, usability, and maintainability of booking.php.
 
-## How We Implemented These Metrics
+**Techniques Used:**
+- Formal Experiments: Test specific hypotheses about system behavior.
+- Surveys: Gather user feedback on the booking interface.
 
-To make UgaTours better, we added some features to track and improve the platform:
+### 2. Hypothesis Testing
+- **Hypothesis 1**: "The booking page loads within 2 seconds for 90% of users."
+  - **Experiment**: Measure page load time under different conditions (10, 100, 1000 bookings).
+  - **Metrics**: Page load time, server response time, database query execution time.
+  - **Action**: Optimize database queries and use caching if necessary.
 
-1. Tracking Bookings
-- Every time someone books a tour, we count it in the database.
-- This helps us see which tours are popular and which ones need improvement.
+- **Hypothesis 2**: "Users can easily cancel a booking without confusion."
+  - **Experiment**: Conduct usability testing with real users.
+  - **Metrics**: Success rate of canceling a booking, user satisfaction score.
+  - **Action**: Improve button visibility and confirmation messages if needed.
 
-2. Measuring Booking Time
-- When someone starts booking a tour, we start a timer.
-- When they finish booking, we stop the timer and save the time it took.
-- This helps us make the booking process faster and smoother.
-  
-# Implementation of Empirical Investigation based on MyBookings.php file
-1. Empirical Investigation
-Goal: Evaluate the performance, usability, and maintainability of the booking.php file.
+- **Hypothesis 3**: "At least 50% of users use the PDF generation feature."
+  - **Experiment**: Track usage of the "Print PDF" button over a month.
+  - **Metrics**: Number of PDFs generated, user feedback.
+  - **Action**: Remove or improve the feature based on results.
 
-Techniques:
+### 3. Data Collection
+- Performance Metrics: Page load time, database query execution time, server response time.
+- Usability Metrics: Booking cancellation success rate, user satisfaction scores.
+- Maintainability Metrics: Code readability (evaluated using PHPMD, PHP_CodeSniffer).
 
-Formal Experiments: Test specific hypotheses about the code's behavior.
+### 4. Control Variables
+- Server load (simulate different numbers of concurrent users).
+- Database size (test with 100, 1000, and 10,000 bookings).
+- User input (use predefined test cases for booking and cancellation).
 
-Surveys: Collect user feedback on the booking interface.
+### 5. Improvements
+- **Performance**: Optimize database queries, use caching for frequently accessed data.
+- **Usability**: Enhance button visibility, add confirmation dialogs.
+- **Maintainability**: Refactor booking.php into smaller components, improve code readability.
 
-2. Hypothesis Testing
-Hypothesis 1: "The booking page loads within 2 seconds for 90% of users."
+### 6. Metrics Summary
+| Metric | Target | Action |
+|--------|--------|--------|
+| Page Load Time | <2 seconds | Optimize queries, use caching |
+| Cancel Booking Success Rate | >90% | Improve button visibility, add confirmation dialog |
+| Code Readability | High | Add comments, use consistent naming conventions |
 
-Experiment: Measure the page load time under different conditions (e.g., with 10, 100, or 1000 bookings).
 
-Metrics: Page load time, server response time, database query execution time.
+## Goals
+1. Improve user satisfaction.
+2. Reduce booking time.
+3. Increase repeat visitors.
 
-Action: Optimize the database query and use caching if the hypothesis is not met.
+### Key Questions
+1. What aspects of the website affect satisfaction?
+2. What factors contribute to booking time?
+3. What features encourage users to return?
 
-Hypothesis 2: "Users can easily cancel a booking without confusion."
+### Metrics
+1. User Satisfaction Score (from surveys)
+2. Average Booking Time (measured in seconds)
+3. Repeat Visitors Percentage (tracked via user accounts)
 
-Experiment: Conduct usability testing with real users.
+### Investigation Techniques
+1. Surveys
+2. Formal Experiments
+3. Case Studies
 
-Metrics: Success rate of canceling a booking, user satisfaction score.
 
-Action: Improve the cancel booking button's visibility and confirmation message if users struggle.
+## Software Size Metrics
+To monitor the growth and efficiency of UgaTours, we use the following metrics:
 
-Hypothesis 3: "The PDF generation feature is used by at least 50% of users."
+### 1. Lines of Code (LOC)
+- Tracks the number of lines in different files.
 
-Experiment: Track the usage of the "Print PDF" button over a month.
+### 2. Function Points (FP)
+- Measures system functionality beyond raw code.
+- Example (MyBookings.php functions):
+  - Booking cancellations
+  - Displaying booking details
+  - Fetching user bookings
+  - Storing booking data
+- MyBookings.php has **20 Function Points**, showing its workload.
 
-Metrics: Number of PDFs generated, user feedback.
+### 3. Reuse Metrics
+- Measures the percentage of reused code.
+- Example: MyBookings.php reuses db_connection.php and nav.php.
+- **Reuse Level: 25%** (50 reused lines out of 200 total).
 
-Action: Remove or improve the feature based on usage data.
+### Tracking Progress
+- **LOC**: To track project growth.
+- **FP**: To monitor functionality expansion.
+- **Reuse Level**: To maintain efficiency and avoid redundant code.
 
-3. Data Collection
-Performance Metrics:
 
-Page load time.
-
-Database query execution time.
-
-Server response time.
-
-Usability Metrics:
-
-Success rate of canceling a booking.
-
-User satisfaction score (e.g., from surveys).
-
-Maintainability Metrics:
-
-Code readability (e.g., using tools like PHPMD or PHP_CodeSniffer).
-
-4. Control Variables
-Ensure that the following variables are controlled during testing:
-
-Server load (e.g., simulate different numbers of concurrent users).
-
-Database size (e.g., test with 100, 1000, and 10,000 bookings).
-
-User input (e.g., use predefined test cases for booking and cancellation).
-
-5. Improvements
-Performance Optimization:
-
-Optimize the database query to reduce execution time.
-
-Use caching for frequently accessed data.
-
-Usability Improvements:
-
-Make the "Cancel Booking" button more prominent.
-
-Add a confirmation dialog before canceling a booking.
-
-Maintainability Improvements:
-
-Break down the booking.php file into smaller, reusable components.
-
-Add comments and consistent naming conventions for better readability.
-
-6. Metrics Summary
-Metric	Value	Action
-Page Load Time	Target: <2 seconds	Optimize database query and use caching.
-Cancel Booking Success Rate	Target: >90%	Improve button visibility and confirmation dialog.
-Code Readability	Target: High	Add comments and consistent naming conventions.
-
-# Goal			
-Improve user satisfaction.
-
-Reduce booking time.		
-
-Increase repeat visitors.		
-# Question
-What aspects of the website affect satisfaction?
-
-What factors contribute to booking time?
-
-What features encourage users to return?
-# Metric
-User satisfaction score (survey)
-
-Average time to complete a booking
-
-Percentage of repeat visitors
-# Investigation Technique
-Survey
-
-Formal Experiment
-
-Case Study
-
-
-## Software Size Metrics  
-
-To keep track of how our UgaTours project grows, we’re using some basic software size metrics. These help us understand how big our codebase is, how functional our system is, and how much code we’re reusing.  
-
-### **1. Lines of Code (LOC)**  
-LOC simply counts how many lines of code we have across different files.  
-  
-
-### **2. Function Points (FP)**  
-Function Points help measure how much functionality our system provides, not just how many lines of code we write.  
-
-For example, in MyBookings.php, we calculated FP based on what the file does:  
-- Handles booking cancellations  
-- Displays booking details  
-- Fetches a user’s bookings  
-- Stores booking info in the database  
-
-After assigning weights to each function type, we found that MyBookings.php has 20 Function Points. This helps us see how much work the file is doing beyond just counting lines.  
-
-### **3. Reuse Metrics**  
-We also checked how much of our code is reused instead of written from scratch.  
-
-For example,MyBookings.php reuses code from `db_connection.php` and `nav.php`. Out of 200 total lines, about 50 lines were reused. That means this file has a reuse level of 25%.  
-
-The higher the reuse level, the more efficient and maintainable our project becomes!  
-
-### **Tracking Progress**  
-We’ll be tracking these metrics over time:  
-LOC to see how our codebase grows  
-FP to monitor how much functionality we add  
-Reuse Level to make sure we’re writing efficient, reusable code  
-
-By keeping an eye on these numbers, we can make better decisions about improving performance, reducing redundant code, and making UgaTours more scalable. 
 ## Software Cost Metrics
-Empirical Investigation
-We conducted hypothesis testing to evaluate the performance and usability of UgaTours.
 
-Hypotheses:
-Hypothesis 1: "The booking page loads within 2 seconds for 90% of users."
+### 1. Empirical Investigation
+We conducted hypothesis testing to evaluate performance and usability:
 
-Experiment: Measure page load time.
+- **Hypothesis 1**: "The booking page loads within 2 seconds for 90% of users."
+  - **Experiment**: Measure page load time.
+  - **Action**: Optimize queries and implement caching.
+  - **File**: MyBookings.php
 
-Action: Optimize database queries and use caching.
+- **Hypothesis 2**: "Users can easily cancel a booking without confusion."
+  - **Experiment**: Conduct usability testing.
+  - **Action**: Improve cancel button visibility, add confirmation.
+  - **File**: MyBookings.php
 
-File: MyBookings.php
+### 2. Feedback Collection
+- Users submit feedback after booking.
+- Feedback is stored in the feedback table.
+- We analyze feedback to improve services.
+- **File**: feedback.php
+  
+## Measuring Software Structural Complexity Metrics
 
-Hypothesis 2: "Users can easily cancel a booking without confusion."
+To ensure high-quality code and a smooth user experience, we’ve analyzed mybookings.php using the following software metrics:
 
-Experiment: Conduct usability testing.
+### **1. Cyclomatic Complexity**
+- Measures the complexity of the control flow.
+- **Value:** 4 (acceptable).
+- **Action:** Refactor if complexity increases.
 
-Action: Improve the cancel booking button and add a confirmation dialog.
 
-File: MyBookings.php
+### **2. Cohesion**
+- Measures how closely related the responsibilities of the file are.
+- **Value:** Medium (handles multiple related tasks).
+- **Action:** Split into smaller files for higher cohesion.
 
+### **3. Coupling**
+- Measures the degree of interdependence between modules.
+- **Value:** Medium (depends on multiple external files).
+- **Action:** Use dependency injection to reduce coupling.
 
-Feedback Collection
-We collect user feedback to improve UgaTours:
+### **4. Information Flow Complexity**
+- Measures how data flows through the file.
+- **Value:** 16 (low).
+- **Action:** Monitor as the file grows.
 
-After booking, users can submit feedback via a form.
+### **5. Data Structure Complexity**
+- Measures the complexity of data structures used.
+- **Value:** 22 (acceptable).
+- **Action:** Simplify if complexity grows.
 
-Feedback is stored in the feedback table.
+## Refactoring Improvements
+- **Improved Cohesion:** Split mybookings.php into smaller files ( cancel_booking.php, generate_pdf.php).
+- **Reduced Coupling:** Use dependency injection to pass the database connection.
+- **Optimized Performance:** Added caching for frequently accessed data.
 
-We analyze feedback to make improvements.
-
-File: feedback.php
