@@ -192,3 +192,35 @@ FP to monitor how much functionality we add
 Reuse Level to make sure we’re writing efficient, reusable code  
 
 By keeping an eye on these numbers, we can make better decisions about improving performance, reducing redundant code, and making UgaTours more scalable. 
+## Software Cost Metrics
+Empirical Investigation
+We conducted hypothesis testing to evaluate the performance and usability of UgaTours.
+
+Hypotheses:
+Hypothesis 1: "The booking page loads within 2 seconds for 90% of users."
+
+Experiment: Measure page load time.
+
+Action: Optimize database queries and use caching.
+
+File: MyBookings.php
+
+Hypothesis 2: "Users can easily cancel a booking without confusion."
+
+Experiment: Conduct usability testing.
+
+Action: Improve the cancel booking button and add a confirmation dialog.
+
+File: MyBookings.php
+
+
+Feedback Collection
+We collect user feedback to improve UgaTours:
+
+After booking, users can submit feedback via a form.
+
+Feedback is stored in the feedback table.
+
+We analyze feedback to make improvements.
+
+File: feedback.php
