@@ -79,6 +79,30 @@ $result = $stmt->get_result();
 
         <?php $stmt->close(); $conn->close(); ?>
     </section>
+    <?php
+// Start timer
+$loadTimeStart = microtime(true);
+
+// Simulate page load
+include_once "db_connection.php";
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM bookings WHERE user_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+// End timer
+$loadTimeEnd = microtime(true);
+$loadTime = $loadTimeEnd - $loadTimeStart;
+
+// Log load time
+$logSql = "INSERT INTO performance_logs (page, load_time) VALUES ('booking', ?)";
+$logStmt = $conn->prepare($logSql);
+$logStmt->bind_param("d", $loadTime);
+$logStmt->execute();
+$logStmt->close();
+?>
 </main>
 
 <footer>
