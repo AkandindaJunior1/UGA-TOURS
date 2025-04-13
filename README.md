@@ -216,9 +216,11 @@ Users receive immediate feedback (success/error messages) on MyBookings.php.
 
 Implementation:
 -Data Source: The error_message field in cancellation_metrics.
+
 -Calculation:
 
--- Daily failure rate
+Daily failure rate
+
 SELECT 
   DATE(created_at) AS date,
   (COUNT(*) - SUM(success)) AS errors,
