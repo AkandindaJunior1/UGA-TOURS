@@ -376,6 +376,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+--usabiliy
   
   CREATE TABLE cancellation_attempts (
     attempt_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -385,3 +386,18 @@ COMMIT;
     error_message TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+  
+  -- Percentage of successful cancellations
+SELECT 
+    (SUM(success) / COUNT(*)) * 100 AS success_rate 
+FROM cancellation_metrics;
+
+  --Reliability
+  -- Number of errors per day
+SELECT 
+    DATE(created_at) AS date,
+    COUNT(*) AS total_attempts,
+    SUM(success) AS successes,
+    COUNT(*) - SUM(success) AS failures
+FROM cancellation_metrics
+GROUP BY date;
