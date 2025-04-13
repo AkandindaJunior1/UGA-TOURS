@@ -190,3 +190,40 @@ To ensure high-quality code and a smooth user experience, we’ve analyzed myboo
 - **Reduced Coupling:** Use dependency injection to pass the database connection.
 - **Optimized Performance:** Added caching for frequently accessed data.
 
+ ## Usability: Cancellation Success Rate (ISO 9126)
+- What: Measures the percentage of successful booking cancellations.
+- Why: To ensure users can easily cancel bookings (a critical usability factor).
+- Implementation:
+Database Table: cancellation_metrics
+
+CREATE TABLE cancellation_metrics (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  booking_id INT,
+  success BOOLEAN, -- 1 for success, 0 for failure
+  error_message VARCHAR(255), -- Error details if cancellation fails
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+- Code Logic:
+
+Every cancellation attempt is logged in cancellation_metrics (success or failure).
+
+Users receive immediate feedback (success/error messages) on MyBookings.php.
+
+## Reliability: Failure Intensity
+-What: Tracks the number of errors per cancellation attempt.
+-Why: To quantify system reliability and identify recurring issues.
+
+Implementation:
+-Data Source: The error_message field in cancellation_metrics.
+-Calculation:
+
+-- Daily failure rate
+SELECT 
+  DATE(created_at) AS date,
+  (COUNT(*) - SUM(success)) AS errors,
+  COUNT(*) AS total_attempts
+FROM cancellation_metrics
+GROUP BY date;
+
+
