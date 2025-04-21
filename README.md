@@ -229,3 +229,67 @@ FROM cancellation_metrics
 GROUP BY date;
 
 
+## Test Metrics Implementation
+Aligns with SENG 421 Chapter 10: Software Test Metrics
+
+Overview
+This module tracks testing effectiveness for the UgaTours booking system using:
+
+Test coverage (features covered)
+
+Pass/fail rates
+
+Test case management
+
+## Key Features
+✅ Test Coverage Tracking
+(Covered Features / Total Features) × 100%
+
+✅ Pass/Fail Rate Calculation
+
+✅ Admin-friendly interface for adding/logging test cases
+
+✅ Visual progress bars for at-a-glance monitoring
+
+Getting Started
+Database Setup: Run these SQL commands:
+
+sql
+CREATE TABLE test_cases (...);
+CREATE TABLE test_results (...);
+Access Dashboard:
+
+Navigate to /test_metrics.php (admin-only)
+
+Usage
+Add Test Case
+
+Feature: "Payment Processing"
+
+Description: "User payment fails with expired credit card"
+
+Log Results
+
+Select test case → Mark as Pass/Fail/Pending
+
+Monitor Metrics
+
+Track coverage growth and test stability over time
+
+Database Schema
+test_cases	test_results
+case_id (PK)	result_id (PK)
+feature (VARCHAR)	case_id (FK)
+description (TEXT)	status (ENUM)
+Screenshot
+Test Metrics Dashboard
+
+## Alignment with Course Concepts
+Implements test coverage metrics (Ch. 10.3)
+
+Tracks pass/fail rates (Ch. 10.6)
+
+Demonstrates test case allocation strategies (Ch. 10.4)
+
+
+
