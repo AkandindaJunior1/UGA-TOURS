@@ -71,9 +71,9 @@ $result = $stmt->get_result();
 
     <!-- Cancel Booking Button -->
     <form action="cancel_booking.php" method="post" onsubmit="return confirm('Are you sure you want to cancel this booking?');">
-        <input type="hidden" name="booking_id" value="<?php echo $row['booking_id']; ?>">
-        <button type="submit" class="cancel-button">Cancel Booking</button>
-    </form>
+    <input type="hidden" name="booking_id" value="<?php echo $row['booking_id']; ?>">
+    <button type="submit" class="cancel-button">Cancel Booking</button>
+</form>
 
     <!-- Print PDF Button -->
     <a href="generate_pdf.php?booking_id=<?php echo $row['booking_id']; ?>" class="print-button" target="_blank">Print PDF</a>
@@ -89,10 +89,34 @@ $result = $stmt->get_result();
 
         <?php $stmt->close(); $conn->close(); ?>
     </section>
+    <?php
+// Start timer
+$loadTimeStart = microtime(true);
+
+// Simulate page load
+include_once "db_connection.php";
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM bookings WHERE user_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+// End timer
+$loadTimeEnd = microtime(true);
+$loadTime = $loadTimeEnd - $loadTimeStart;
+
+// Log load time
+$logSql = "INSERT INTO performance_logs (page, load_time) VALUES ('booking', ?)";
+$logStmt = $conn->prepare($logSql);
+$logStmt->bind_param("d", $loadTime);
+$logStmt->execute();
+$logStmt->close();
+?>
 </main>
 
 <footer>
-    <p>&copy; 2024 UgaTours. All rights reserved.</p>
+    <p>&copy; 2024 UgaTours Group 11. All rights reserved.</p>
 </footer>
 
 </body>

@@ -31,6 +31,21 @@ body {
     margin-bottom: 15px;
 }
 
+.why-choose-us {
+    margin-top: 30px; /* Space above why-choose-us section */
+    border-top: 2px solid #026600; /* Separator line */
+    padding-top: 20px;
+}
+
+.why-choose-us h2{
+    color: #00660f; /* Consistent header color */
+    text-align: center;
+}
+
+.why-choose-us strong {
+    color: #00660f; /* Consistent strong color */
+}
+
 /* Contact info section styles */
 .contact-info {
     margin-top: 30px; /* Space above contact section */
