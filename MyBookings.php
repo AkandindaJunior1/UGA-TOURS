@@ -2,6 +2,16 @@
 session_start();
 include_once "db_connection.php";
 
+//if (!isset($_SESSION['user_id'])) (1)
+//if (isset($_SESSION['message'])) (2)
+//if ($result->num_rows > 0) (3)
+//while ($row = $result->fetch_assoc()) (4)
+
+// M = Number of decision points + 1
+// M = 4 + 1 = 5
+//Cyclomatic Complexity: 5
+
+
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
