@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt->close();
     $conn->close();
-    header("Location: MyBookings.php");
-    exit();
-}
+   // Redirect directly to Google Form
+header("Location: https://docs.google.com/forms/d/e/1FAIpQLScfHyysKnC-rbFDcjo6I6_QVhZXxdQrjgSsTyTPPFGsrerG0w/viewform?usp=header");
+exit();
 ?>
