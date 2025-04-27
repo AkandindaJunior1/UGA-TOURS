@@ -7,7 +7,7 @@ include_once "db_connection.php";
 //if ($result->num_rows > 0) (3)
 
 // M = Number of decision points + 1
-// M = 3 + 1 = 5
+// M = 3 + 1 = 4
 //Cyclomatic Complexity: 4
 
 
