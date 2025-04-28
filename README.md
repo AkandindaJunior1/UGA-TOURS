@@ -50,7 +50,7 @@ To ensure UgaTours remains user-friendly and effective, we track the following:
 
 ### 2. Hypothesis Testing
 - **Hypothesis 1**: "The booking page loads within 2 seconds for 90% of users."
-  - **Experiment**: Measure page load time under different conditions (10, 100, 1000 bookings).
+  - **Experiment**: Measure page load time under different conditions (5, 10, 20 bookings).
   - **Metrics**: Page load time, server response time, database query execution time.
   - **Action**: Optimize database queries and use caching if necessary.
 
@@ -58,12 +58,50 @@ To ensure UgaTours remains user-friendly and effective, we track the following:
   - **Experiment**: Conduct usability testing with real users.
   - **Metrics**: Success rate of canceling a booking, user satisfaction score.
   - **Action**: Improve button visibility and confirmation messages if needed.
+-**Surveys #
+Your Email Address
+(Short answer)
+How easy was it to find a tour package?
+(Multiple Choice or Linear Scale — 1 to 3)
 
-- **Hypothesis 3**: "At least 50% of users use the PDF generation feature."
-  - **Experiment**: Track usage of the "Print PDF" button over a month.
-  - **Metrics**: Number of PDFs generated, user feedback.
-  - **Action**: Remove or improve the feature based on results.
+1 - Very Difficult
+2 - Neutral
+3 - Very Easy
+How easy was the booking process?
+(Multiple Choice or Linear Scale — 1 to 3)
 
+1 - Very Difficult
+2 - Neutral
+3 - Very Easy
+
+How satisfied were you with the information provided about the destinations?
+(Multiple Choice or Linear Scale — 1 to 3)
+1 - Not Satisfied
+2 - Neutral
+3 - Very Satisfied
+If you contacted customer support, how satisfied were you?
+(Multiple Choice)
+1 - Not Satisfied
+2 - Neutral
+3 - Very Satisfied
+N/A - Did not use support
+Would you recommend UgaTours to others?
+(Multiple Choice)
+Yes
+No
+What did you enjoy the most about UgaTours?
+(Paragraph text)
+Free text answer.
+What can we improve?
+(Paragraph text)
+Free text answer.
+How did you hear about UgaTours?
+(Multiple Choice)   
+Google Search
+Social Media (Instagram, Facebook, etc.)
+Friends/Family Recommendation
+Online Ads
+Other
 ### 3. Data Collection
 - Performance Metrics: Page load time, database query execution time, server response time.
 - Usability Metrics: Booking cancellation success rate, user satisfaction scores.
