@@ -1,5 +1,53 @@
 <?php
 session_start();
+<?php
+session_start();
+
+// ───── [ METRIC: MTTF - Mean Time To Failure ] ───── //
+
+// 1. Initialize values on first visit
+if (!isset($_SESSION['start_time'])) {
+    $_SESSION['start_time'] = time();           // when user/system started
+    $_SESSION['failure_count'] = 0;             // number of failures
+}
+
+// 2. Helper function to record a failure
+function recordFailure() {
+    $_SESSION['failure_count']++;
+}
+
+// 3. Wrap dangerous logic in try-catch to count failures
+try {
+    include_once "db_connection.php";
+
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.php");
+        exit;
+    }
+
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT b.booking_id, b.booking_date, t.name, t.description, t.price, t.duration
+            FROM bookings b
+            JOIN tours t ON b.tour_id = t.tour_id
+            WHERE b.user_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+} catch (Exception $e) {
+    recordFailure();  // increment failure count
+    $_SESSION['message'] = "An error occurred.";
+    header("Location: booking.php");
+    exit;
+}
+
+// 4. Compute MTTF (Mean Time To Failure)
+$elapsedSeconds = time() - $_SESSION['start_time'];
+$failures = max($_SESSION['failure_count'], 1); // avoid divide by zero
+$mttf = $elapsedSeconds / $failures;
+?>
+
 include_once "db_connection.php";
 
 //if (!isset($_SESSION['user_id'])) (1)
@@ -116,7 +164,12 @@ $logStmt->close();
 
 <footer>
     <p>&copy; 2024 UgaTours Group 11. All rights reserved.</p>
+    <p style="font-size: small; color: gray;">
+        MTTF: <?php echo number_format($mttf, 2); ?> seconds/failure 
+        (<?php echo $_SESSION['failure_count']; ?> total failures)
+    </p>
 </footer>
+
 
 </body>
 </html>
